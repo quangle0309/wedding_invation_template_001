@@ -16,6 +16,7 @@
                             2: '#e0e5ec',
                             3: '#f9fafb',
                             4: '#a5b2c3',
+                            5: '#cde0ef',
                         }
                     }
                 }
@@ -115,7 +116,7 @@
 
 <!-- time countdown -->
 <section>
-    <div class="my-16 grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1000px] mx-auto">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1000px] mx-auto max-md:p-[1rem] max-md:my-12 md:p-[6rem]">
         <div class="relative mx-auto w-40 h-40 bg-contain bg-center bg-no-repeat"
              style="background-image: url('images/clock-bg.png')">
             <div class="absolute inset-0 flex text-primary flex-col items-center justify-center">
@@ -152,13 +153,14 @@
     <div class="lg:flex gap-16 relative max-lg:flex-wrap">
         <!-- Chú Rể -->
         <div class="lg:text-right max-lg:text-center max-md:w-[90vw] md:w-[75vw] lg:w-64 mx-auto lg:mt-32">
-            <div class="flex max-lg:justify-center lg:justify-end">
+            <div class="flex max-lg:justify-center lg:justify-end relative">
+                <div class="absolute w-52 h-52 scale-110 border border-secondary-5 rounded-full"></div>
                 <img class=" overflow-hidden rounded-full w-52 h-52" src="images/chu_re_template.webp" alt="img">
             </div>
-            <h2 class="font-Corinthia font-bold text-4xl mt-4 text-primary">Lê Hồng Quang</h2>
-            <div class="text-secondary mt-4 ">
-                <p>Con ông: <span class="font-bold">Họ tên bố</span></p>
-                <p>Con bà: <span class="font-bold">Họ tên mẹ</span></p>
+            <h2 class="font-Corinthia font-bold text-4xl mt-6 text-primary">Lê Hồng Quang</h2>
+            <div class="text-secondary-1 mt-4">
+                <p>Con ông: <span class="font-bold uppercase">Họ tên bố</span></p>
+                <p>Con bà: <span class="font-bold uppercase">Họ tên mẹ</span></p>
                 <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos dolorem
                     facilis fuga iste laudantium sapiente tenetur voluptates.</p>
             </div>
@@ -171,9 +173,14 @@
 
         <!-- Cô Dâu -->
         <div class="lg:text-left max-lg:text-center max-md:w-[90vw] md:w-[75vw] lg:w-64 mt-12 mx-auto lg:mt-32">
-            <img class="overflow-hidden max-lg:mx-auto rounded-full w-52 h-52" src="images/co_dau_template.webp" alt="img">
-            <h2 class="font-Corinthia font-bold text-4xl mt-4 text-primary">Cô dâu abcxyz</h2>
-            <div class="text-secondary mt-4">
+            <div class="flex max-lg:justify-center relative">
+                <div class="absolute w-52 h-52 scale-110 border border-secondary-5 rounded-full"></div>
+                <img class="overflow-hidden max-lg:mx-auto rounded-full w-52 h-52" src="images/co_dau_template.webp"
+                     alt="img">
+            </div>
+
+            <h2 class="font-Corinthia font-bold text-4xl mt-6 text-primary">Cô dâu abcxyz</h2>
+            <div class="text-secondary-1 mt-4">
                 <p>Con ông: <span class="font-bold">Họ tên bố</span></p>
                 <p>Con bà: <span class="font-bold">Họ tên mẹ</span></p>
                 <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consectetur dicta earum
@@ -206,49 +213,71 @@
             <div class="story-item">
                 <div class="max-lg:w-[18rem] lg:w-[22rem] max-lg:h-[18rem] lg:h-[22rem] relative before:absolute before:rounded-full max-lg:before:w-[20rem] lg:before:w-[24rem] max-lg:before:h-[20rem] lg:before:h-[24rem] before:border before:border-dashed before:border-primary before:left-1/2 before:top-1/2 before:-translate-y-1/2 before:-translate-x-1/2">
                     <img class="absolute rounded-full z-20" src="images/love_story.webp" alt="story-timeline">
-                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png" alt="flower">
+                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png"
+                         alt="flower">
                     <div class="max-lg:hidden absolute rounded-full w-[26rem] h-[26rem] border-t border-dashed border-primary top-1/2 z-10 story-border"></div>
                 </div>
-                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
-                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Bạn có tin vào tình yêu online không?</h1>
+                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[100vw] md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
+                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Bạn có tin vào tình yêu
+                        online không?</h1>
                     <h4 class="text-primary mb-3 max-lg:text-md lg:text-xl">December 12 2015</h4>
-                    <p class="text-secondary max-lg:text-sm">Lorem ipsum dolor sit amet...</p>
+                    <p class="text-secondary-1 max-lg:text-sm">Tôi đã từng không tin vào tình yêu online. Đã từng nghĩ
+                        làm sao có thể thích một người chưa từng gặp mặt? Vậy mà giờ đây tôi lại đang như vậy, bây giờ
+                        tôi đã hiểu: thế giới ảo tình yêu thật đấy!!! Ngày ấy vu vơ đăng một dòng status trên facebook
+                        than thở, vu vơ đùa giỡn nói chuyện với một người xa lạ chưa từng quen. Mà nào hay biết, 4 năm
+                        sau người ấy lại là chồng mình.</p>
                 </div>
             </div>
             <div class="story-item">
                 <div class="max-lg:w-[18rem] lg:w-[22rem] max-lg:h-[18rem] lg:h-[22rem] relative before:absolute before:rounded-full max-lg:before:w-[20rem] lg:before:w-[24rem] max-lg:before:h-[20rem] lg:before:h-[24rem] before:border before:border-dashed before:border-primary before:left-1/2 before:top-1/2 before:-translate-y-1/2 before:-translate-x-1/2">
-                    <img class="absolute rounded-full z-20" src="images/love_story.webp" alt="story-timeline">
-                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png" alt="flower">
+                    <img class="absolute rounded-full z-20" src="images/love_story_1.webp" alt="story-timeline">
+                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png"
+                         alt="flower">
                     <div class="max-lg:hidden absolute rounded-full w-[26rem] h-[26rem] border-t border-dashed border-primary top-1/2 z-10 story-border"></div>
                 </div>
-                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
-                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Bạn có tin vào tình yêu online không?</h1>
-                    <h4 class="text-primary mb-3 max-lg:text-md lg:text-xl">December 12 2015</h4>
-                    <p class="text-secondary max-lg:text-sm">Lorem ipsum dolor sit amet...</p>
+                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[100vw] md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
+                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Lời tỏ tình dễ thương
+                        ^^</h1>
+                    <h4 class="text-primary mb-3 max-lg:text-md lg:text-xl">August 04 2016</h4>
+                    <p class="text-secondary-1 max-lg:text-sm">Ngày ấy, tôi 21! Một mình giữa phố thị nấp tập. Mỗi chiều
+                        cuối tuần thường chạy xe vòng quanh qua những con phố, len lỏi trong từng dòng người tấp nập.
+                        Hay thậm chí là ghé vào một quán cà phê ven đường để ngồi đó và cảm nhận về cuộc sống của riêng
+                        mình. Đôi khi lạc lõng và hơi cô đơn. Nhưng rồi một ngày đẹp trời, người con trai ấy xuất hiện,
+                        nắm tay rồi thủ thỉ vào tai: “Hy vọng sau này anh được làm những điều ấy cùng em”.</p>
                 </div>
             </div>
             <div class="story-item">
                 <div class="max-lg:w-[18rem] lg:w-[22rem] max-lg:h-[18rem] lg:h-[22rem] relative before:absolute before:rounded-full max-lg:before:w-[20rem] lg:before:w-[24rem] max-lg:before:h-[20rem] lg:before:h-[24rem] before:border before:border-dashed before:border-primary before:left-1/2 before:top-1/2 before:-translate-y-1/2 before:-translate-x-1/2">
-                    <img class="absolute rounded-full z-20" src="images/love_story.webp" alt="story-timeline">
-                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png" alt="flower">
+                    <img class="absolute rounded-full z-20" src="images/love_story_2.webp" alt="story-timeline">
+                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png"
+                         alt="flower">
                     <div class="max-lg:hidden absolute rounded-full w-[26rem] h-[26rem] border-t border-dashed border-primary top-1/2 z-10 story-border"></div>
                 </div>
-                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
-                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Bạn có tin vào tình yêu online không?</h1>
-                    <h4 class="text-primary mb-3 max-lg:text-md lg:text-xl">December 12 2015</h4>
-                    <p class="text-secondary max-lg:text-sm">Lorem ipsum dolor sit amet...</p>
+                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[100vw] md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
+                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Phút giây cầu hôn</h1>
+                    <h4 class="text-primary mb-3 max-lg:text-md lg:text-xl">May 10 2018</h4>
+                    <p class="text-secondary-1 max-lg:text-sm">5 năm bên nhau không phải là quãng thời gian quá dài,
+                        nhưng đủ cho chúng ta nhận ra được rất nhiều điều. Yêu nhau, vun vén hạnh phúc và cùng nỗ lực
+                        vượt qua những khó khăn trong cuộc sống. Chúng ta từ 2 con người xa lạ mà bước vào cuộc đời
+                        nhau. Và giờ đây chúng ta tiếp tục cùng nhau sang trang mới. Giây phút anh ngỏ lời “Làm vợ anh
+                        nhé!”, em đã nguyện ý đời này, đi đâu cũng được, miễn là cùng anh.</p>
                 </div>
             </div>
             <div class="story-item">
                 <div class="max-lg:w-[18rem] lg:w-[22rem] max-lg:h-[18rem] lg:h-[22rem] relative before:absolute before:rounded-full max-lg:before:w-[20rem] lg:before:w-[24rem] max-lg:before:h-[20rem] lg:before:h-[24rem] before:border before:border-dashed before:border-primary before:left-1/2 before:top-1/2 before:-translate-y-1/2 before:-translate-x-1/2">
-                    <img class="absolute rounded-full z-20" src="images/love_story.webp" alt="story-timeline">
-                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png" alt="flower">
+                    <img class="absolute rounded-full z-20" src="images/love_story_3.webp" alt="story-timeline">
+                    <img class="absolute -bottom-16 left-1/2 -translate-x-1/2 z-30" src="images/flower.png"
+                         alt="flower">
                     <div class="max-lg:hidden absolute rounded-full w-[26rem] h-[26rem] border-t border-dashed border-primary top-1/2 z-10 story-border"></div>
                 </div>
-                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
-                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Bạn có tin vào tình yêu online không?</h1>
-                    <h4 class="text-primary mb-3 max-lg:text-md lg:text-xl">December 12 2015</h4>
-                    <p class="text-secondary max-lg:text-sm">Lorem ipsum dolor sit amet...</p>
+                <div class="lg:w-[22rem] md:w-[75vw] max-md:w-[100vw] md:w-[90vw] relative max-lg:mt-20 max-lg:bg-secondary-3 p-[1rem] max-lg:text-center">
+                    <h1 class="font-Corinthia max-lg:text-2xl lg:text-4xl text-primary mb-4">Ngày lễ đính hôn</h1>
+                    <h4 class="text-primary mb-3 max-lg:text-md lg:text-xl">July 03 2018</h4>
+                    <p class="text-secondary-1 max-lg:text-sm">“Tiếng trái tim đôi ta đập thật nhanh. Thì thầm lời yêu
+                        thương. Ngày tình về chung đôi...” Sau bao nhiêu chờ đợi, cuối cùng ngày vui của chúng ta cũng
+                        tới rồi. Cảm ơn vì mình đã luôn là một phần trong cuộc sống của nhau. Em và anh không chỉ là
+                        người yêu mà chúng ta còn là tri kỷ. Ngày hôm nay, em sẽ là cô dâu của anh và sau này sẽ là mẹ
+                        của các con anh.</p>
                 </div>
             </div>
         </div>
@@ -265,14 +294,32 @@
             <div class="absolute w-3/5 border-b border-secondary -right-12 -bottom-4"></div>
         </div>
     </div>
-    <div class="max-w-6xl mx-auto p-4 mt-12">
+    <div class="p-4 mt-12">
         <div class="columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2">
-            <img src="images/love_story.webp" alt="item" class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="images/section_template_1.webp" alt="item" class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="images/section_template_2.webp" alt="item" class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="images/co_dau_template.webp" alt="item" class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="images/couple_template.webp" alt="item" class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="images/love_story.webp" alt="item" class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/love_story.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/section_template_1.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/section_template_2.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/co_dau_template.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/couple_template.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/love_story.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/love_story.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/section_template_1.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/section_template_2.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/co_dau_template.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/couple_template.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="images/love_story.webp" alt="item"
+                 class="image-item w-full h-auto object-cover shadow-lg break-inside-avoid cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
         </div>
     </div>
 
@@ -293,7 +340,7 @@
             <div class="absolute w-3/5 border-b border-secondary -right-12 -bottom-4"></div>
         </div>
     </div>
-    <div class="grid xl:grid-cols-4 lg:grid-cols-2 mt-20">
+    <div class="grid xl:grid-cols-4 md:grid-cols-2 mt-20 gap-y-12">
         <div class="relative w-[18rem] border-x-2 border-secondary-4 p-4 mx-auto">
             <div class="absolute w-3/5 top-0 right-0 bg-secondary-4 h-[2px]"></div>
             <div class="absolute w-3/5 bottom-0 left-0 bg-secondary-4 h-[2px]"></div>
@@ -301,9 +348,11 @@
             <img class="absolute -bottom-3 right-2 w-[6rem]" src="images/event-shape-2.png" alt="img">
             <div class="bg-secondary-2 px-4 py-[4rem] text-center">
                 <h1 class="uppercase text-primary font-bold mb-4">Lễ cưới nhà nam</h1>
-                <img class="mx-auto w-3/4" src="images/event_wedding_1.webp" alt="wedding_event">
+                <img class="mx-auto w-3/4 aspect-square object-cover" src="images/event_wedding_1.webp"
+                     alt="wedding_event">
                 <p class="text-secondary-1 mt-2">07:30, 2023-02-10</p>
-                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà Nẵng</p>
+                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà
+                    Nẵng</p>
             </div>
         </div>
         <div class="relative w-[18rem] border-x-2 border-secondary-4 p-4 mx-auto">
@@ -313,9 +362,11 @@
             <img class="absolute -bottom-3 right-2 w-[6rem]" src="images/event-shape-2.png" alt="img">
             <div class="bg-secondary-2 px-4 py-[4rem] text-center">
                 <h1 class="uppercase text-primary font-bold mb-4">Lễ cưới nhà nam</h1>
-                <img class="mx-auto w-3/4" src="images/event_wedding_1.webp" alt="wedding_event">
+                <img class="mx-auto w-3/4 aspect-square object-cover" src="images/event_wedding_1.webp"
+                     alt="wedding_event">
                 <p class="text-secondary-1 mt-2">07:30, 2023-02-10</p>
-                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà Nẵng</p>
+                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà
+                    Nẵng</p>
             </div>
         </div>
         <div class="relative w-[18rem] border-x-2 border-secondary-4 p-4 mx-auto">
@@ -325,9 +376,11 @@
             <img class="absolute -bottom-3 right-2 w-[6rem]" src="images/event-shape-2.png" alt="img">
             <div class="bg-secondary-2 px-4 py-[4rem] text-center">
                 <h1 class="uppercase text-primary font-bold mb-4">Lễ cưới nhà nam</h1>
-                <img class="mx-auto w-3/4" src="images/event_wedding_1.webp" alt="wedding_event">
+                <img class="mx-auto w-3/4 aspect-square object-cover" src="images/event_wedding_1.webp"
+                     alt="wedding_event">
                 <p class="text-secondary-1 mt-2">07:30, 2023-02-10</p>
-                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà Nẵng</p>
+                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà
+                    Nẵng</p>
             </div>
         </div>
         <div class="relative w-[18rem] border-x-2 border-secondary-4 p-4 mx-auto">
@@ -337,14 +390,45 @@
             <img class="absolute -bottom-3 right-2 w-[6rem]" src="images/event-shape-2.png" alt="img">
             <div class="bg-secondary-2 px-4 py-[4rem] text-center">
                 <h1 class="uppercase text-primary font-bold mb-4">Lễ cưới nhà nam</h1>
-                <img class="mx-auto w-3/4" src="images/event_wedding_1.webp" alt="wedding_event">
+                <img class="mx-auto w-3/4 aspect-square object-cover" src="images/event_wedding_1.webp"
+                     alt="wedding_event">
                 <p class="text-secondary-1 mt-2">07:30, 2023-02-10</p>
-                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà Nẵng</p>
+                <p class="text-secondary-1 mt-4 mx-auto">TƯ GIA NHÀ NỮ - 123 Nguyễn Tất Thành, Hòa Phướng, Hải Châu, Đà
+                    Nẵng</p>
             </div>
         </div>
     </div>
-
 </section>
+<section class="bg-secondary-3 mt-32 p-[4rem]">
+    <div class="max-md:grid max-md:grid-cols-1 md:flex gap-6 md:justify-center md:items-center h-full">
+        <!-- Thẻ 1 -->
+        <div class="relative z-20 group flex gap-2 items-end justify-center p-4 bg-secondary-5 max-md:w-full md:w-[14rem] transition-all duration-300 hover:bg-primary hover:text-white">
+            <div class="absolute transition-all duration-300 z-10 border border-secondary-5 group-hover:border-primary -bottom-2 -right-2 w-full h-full"></div>
+            <img class="h-[1.5rem] w-auto filter invert group-hover:invert-0 transition-all duration-300"
+                 src="images/wishes.webp" alt="img">
+            <p class="uppercase max-md:text-xs md:text-sm text-dark">Gửi lời chúc</p>
+        </div>
+
+        <!-- Thẻ 2 -->
+        <div class="relative z-20 group flex gap-2 items-end justify-center p-4 bg-secondary-5 max-md:w-full md:w-[14rem] transition-all duration-300 hover:bg-primary hover:text-white">
+            <div class="absolute transition-all duration-300 z-10 border border-secondary-5 group-hover:border-primary -bottom-2 -right-2 w-full h-full"></div>
+            <img class="h-[1.5rem] w-auto filter invert group-hover:invert-0 transition-all duration-300"
+                 src="images/rsvp4.webp" alt="img">
+            <p class="uppercase max-md:text-xs md:text-sm text-dark">Xác nhận tham dự</p>
+        </div>
+
+        <!-- Thẻ 3 -->
+        <div class="relative z-20 group flex gap-2 items-end justify-center p-4 bg-secondary-5 max-md:w-full md:w-[14rem] transition-all duration-300 hover:bg-primary hover:text-white">
+            <div class="absolute transition-all duration-300 z-10 border border-secondary-5 group-hover:border-primary -bottom-2 -right-2 w-full h-full"></div>
+            <img class="h-[1.5rem] w-auto filter invert group-hover:invert-0 transition-all duration-300"
+                 src="images/money_bag.webp" alt="img">
+            <p class="uppercase max-md:text-xs md:text-sm text-dark">Mừng cưới</p>
+        </div>
+    </div>
+</section>
+
+
+
 <script src="main.js"></script>
 </body>
 </html>

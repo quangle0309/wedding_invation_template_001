@@ -23,7 +23,7 @@ window.addEventListener('scroll', function() {
     const navItems = document.querySelectorAll('.nav__item ul li');
     const nameTag = document.querySelector('.name-tag');
 
-    if (window.scrollY > (window.innerHeight * 0.8)) {
+    if (window.scrollY > (window.innerHeight * 0.6)) {
         navbar.classList.remove('bg-opacity-20');
         nameTag.classList.add('text-primary');
         nameTag.classList.remove('text-white');
