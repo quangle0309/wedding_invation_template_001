@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'FleurDeLeah';
+    src: url('fonts/FleurDeLeah-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Corinthia-Bold';
+    src: url('fonts/Corinthia-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Corinthia';
+    src: url('fonts/Corinthia-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SendFlowers';
+    src: url('fonts/SendFlowers-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-custom';
+    src: url('fonts/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Splash-Regular';
+    src: url('fonts/Splash-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.love-store__reverse {
+
+}
+
+body {
+    font-family: 'Roboto-custom', sans-serif;
+}
+
+.font-FleurDeLeah {
+    font-family: 'FleurDeLeah', sans-serif;
+}
+
+.font-Corinthia {
+    font-family: 'Corinthia-Bold', sans-serif;
+}
+
+.font-Splash-Regular {
+    font-family: 'Splash-Regular', sans-serif;
+}
+
+/*  love store  */
+.story-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+}
+
+.story-item:nth-child(odd) {
+    flex-direction: row;
+    text-align: left;
+}
+
+.story-item:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.story-item:nth-child(odd) .story-border {
+    right: -10rem;
+    transform: rotate(10deg);
+}
+
+.story-item:nth-child(even) .story-border {
+    left: -10rem;
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 1024px) {
+    .story-item {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    .story-item .story-border {
+        display: none;
+    }
+
+    .story-item:nth-child(even) {
+        text-align: left;
+    }
+}
