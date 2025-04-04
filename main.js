@@ -17,7 +17,7 @@ function nextSlide() {
 showSlide(currentSlide);
 setInterval(nextSlide, 5000);
 
-
+// scroll navbar
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('nav');
     const navItems = document.querySelectorAll('.nav__item ul li');
@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll(".image-item");
     const previewModal = document.getElementById("preview-modal");
     const previewImage = document.getElementById("preview-image");
-    const closePreview = document.getElementById("close-preview");
     const navbar = document.querySelector('nav');
 
     images.forEach(img => {
@@ -59,15 +58,47 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    closePreview.addEventListener("click", () => {
-        previewModal.classList.add("hidden");
-        navbar.classList.remove("hidden");
-    });
-
     previewModal.addEventListener("click", (e) => {
         if (e.target === previewModal) {
             previewModal.classList.add("hidden");
             navbar.classList.remove("hidden");
+        }
+    });
+});
+
+// modal mừng cưới
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("modal");
+    const openModal = document.querySelectorAll(".openModal");
+    const closeModal = document.getElementById("closeModal");
+
+
+    openModal.forEach(item => {
+        item.addEventListener('click', () => {
+            modal.classList.remove("hidden");
+        })
+    })
+
+    closeModal.addEventListener("click", function () {
+        modal.classList.add("hidden");
+    });
+
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });
+});
+
+document.querySelectorAll('.nav__item li').forEach(item => {
+    item.addEventListener('click', function () {
+        const target = document.querySelector(item.getAttribute('data-target'));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
 });
